@@ -79,6 +79,14 @@ var arrStrTxtLen = function(arr){
     return l;
 };
 
+var tts = function(arr){
+    var t = "";
+    for(var i = 0; i < arr.length; i ++){
+        t += arr[i];
+    }
+    return t;
+};
+
 //Basic GUI element
 var GUI = function(type,shape,cs,x,y,w,h,r,sx,sy,txt,exec){
     //imagery stuff
@@ -184,13 +192,13 @@ Input.prototype = Object.create(GUI.prototype);
 Input.prototype.clicked = function(){
     if(this.mOvr){
         //execute code for when button is clicked
-        this.txt = ["a"];
+        this.txt = [];
         this.typing = true;
     }
 };
 Input.prototype.execute = function(){
     if(this.typing){
-        if(frameCount % 50 < 25){// <= 0 && frameCount % 10 > 6){
+        if(frameCount % 50 < 25){
             stroke(0);
             strokeWeight(2);
             
@@ -202,6 +210,13 @@ Input.prototype.execute = function(){
             var px = this.w / 2 - arrStrTxtLen(this.txt)/ 2 + textWidth(txt1);
             line(this.x + px,this.y + this.h/6,this.x + px,this.y + (this.h*5)/6);
         }
+    }
+};
+Input.prototype.typeTxt = function(){
+    this.txt.push(key.toString());
+    if(keyCode === 8){
+        this.txt.pop();
+        this.txt.pop();
     }
 };
 
