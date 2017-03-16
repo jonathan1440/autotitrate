@@ -1,7 +1,7 @@
 background(255);
 	fill(0);
 	textSize(12);
-	textAlign(CENTER,CENTER);
+	textAlign(LEFT,CENTER);
 	text("this is  a test",20,20);
 	text(frameCount,20,40);
 
