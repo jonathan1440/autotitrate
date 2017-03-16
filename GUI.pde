@@ -1,4 +1,5 @@
 size(1000,500);
+var run = true;
 
 //stores GUI element objects
 var guiElements = [];
@@ -193,7 +194,7 @@ Input.prototype.execute = function(){
 
 new Input("whole element","rectangle",0,20,100,100,30,0,1,1,"input",function(){});
 
-draw = function() {
+void draw() {
     background(255);
     
     //draw GUI elements
