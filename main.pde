@@ -1,3 +1,5 @@
+size(1000,400);
+
 background(255);
 fill(0);
 textSize(12);
