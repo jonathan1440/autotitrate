@@ -207,14 +207,14 @@ void draw() {
     
 };
 
-var mouseMoved = function(){
+void mouseMoved(){
     //is mouse over GUI elements?
     for(var i = 0; i < guiElements.length; i ++){
         guiElements[i].over();
     }
 };
 
-var mouseClicked = function(){
+void mouseClicked(){
     //is a GUI element clicked?
     for(var i = 0; i < guiElements.length; i ++){
         guiElements[i].clicked();
