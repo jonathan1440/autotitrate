@@ -74,7 +74,7 @@ var txtSze = function(txt,ts,w,h){
 var arrStrTxtLen = function(arr){
     var l = 0;
     for(var i = 0; i < arr.length; i ++){
-        l += textWidth(arr[i];
+        l += textWidth(arr[i]);
     }
     return l;
 };
