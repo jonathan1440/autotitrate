@@ -1,4 +1,4 @@
-size(1000,1000);
+size(1000,500);
 
 //stores GUI element objects
 var guiElements = [];
