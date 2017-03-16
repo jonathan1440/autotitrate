@@ -1,5 +1,4 @@
 size(1000,500);
-var run = true;
 
 //stores GUI element objects
 var guiElements = [];
@@ -70,6 +69,14 @@ var txtSze = function(txt,ts,w,h){
     }
     
     return ts;
+};
+
+var arrStrTxtLen = function(arr){
+    var l = 0;
+    for(var i = 0; i < arr.length; i ++){
+        l += textWidth(arr[i];
+    }
+    return l;
 };
 
 //Basic GUI element
@@ -186,7 +193,13 @@ Input.prototype.execute = function(){
         if(frameCount % 50 < 25){// <= 0 && frameCount % 10 > 6){
             stroke(0);
             strokeWeight(2);
-            var px = textWidth(this.txt[this.pointerLocation]) / 2 + this.w / 2;
+            
+            var txt1 = "";
+            for(var i = 0; i < this.pointerLocation; i ++){
+                txt1 += this.txt[i];
+            }
+            
+            var px = this.w / 2 - arrStrTxtLen(this.txt)/ 2 + textWidth(txt1);
             line(this.x + px,this.y + this.h/6,this.x + px,this.y + (this.h*5)/6);
         }
     }
