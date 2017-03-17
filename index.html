@@ -4,17 +4,29 @@
 <head>
     <meta charset="utf-8" />
 	<title> Auto-Titrate </title>
-    <script type="text/javascript" src="processing.js"></script>
+ 
 </head>
     
 <body>
 	<h1>Auto-Titrate</h1>
 	<h2>WIP</h2>
 	
-	<h3>main.pde</h3>
+	<h3>Input Your Data</h3>
 	<!-- main.pde -->
 	<div id="container">
 		<div id="main" role="main">
+			<form>
+  Molar Concentration of Weak <input type="radio" name="inittype" value="Base" checked><input type="radio" name="inittype" value="Acid">:<br>
+  <input type="text" name="initial"><br>
+  Concentration of <input type="radio" name="addtype" value="Base" checked><input type="radio" name="addtype" value="Acid"> added:<br>
+  <input type="text" name="added">
+  <input type="submit" value="Submit">
+				<form action="/Results.php">
+					<!-- This form should ask for 
+concentration inputs and specify if the initial and added substance is a base or acid -->
+					
+ 
+</form>
 			<canvas class="processingcanvas" data-processing-sources="main.pde"></canvas> 
 		</div>
 		<footer>
@@ -29,7 +41,7 @@
 			<canvas class="processingcanvas" data-processing-sources="GUI.pde"></canvas> 
 		</div>
 		<footer>
-			made with Processing.js
+			Made by Jonathan and Keaton
 		</footer>
 	</div>
 </body>
