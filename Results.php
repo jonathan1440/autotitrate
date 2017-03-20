@@ -2,7 +2,7 @@
 <html>
   <body>
     <?php
-$initial = $_POST["initial"];
+$initial = $_GET["initial"];
   echo "$initial";
 ?>
   </body>
