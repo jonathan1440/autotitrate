@@ -1,4 +1,4 @@
 
-$initial = <?php $_GET["initial"]>;
+$initial = <?php $_POST["initial"]>;
   echo $initial;
 
