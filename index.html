@@ -26,6 +26,9 @@
 			margin: 5px;
 			border: 4px solid lightgreen;
 		}
+		.exp{
+			width: 25px;
+		}
 	</style>
 </head>
     
@@ -44,7 +47,7 @@
   				Molar Concentration of Weak ___: <br />
 				<input type="radio" name="inittype" value="Base" checked> Base <br />
 				<input type="radio" name="inittype" value="Acid"> Acid <br />
-				Molarity: <input type="number" name="initial"><br />
+				Molarity: <input type="number" name="initial"> x 10^<input class="exp" type="number" name="exponent"><br />
 				</div>
 				<br />
 				
@@ -52,7 +55,7 @@
 				Molar Concentration of Strong ____ added:<br />
 				<input type="radio" name="addtype" value="Base" checked> Base <br />
 				<input type="radio" name="addtype" value="Acid"> Acid <br />
-				Molarity: <input type="number" name="added"> x 10^<input type="number" name="exponent"><br />
+				Molarity: <input type="number" name="added"> x 10^<input class="exp" type="number" name="exponent"><br />
 				</div>
 				<br />
 				
