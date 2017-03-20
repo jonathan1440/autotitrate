@@ -3,7 +3,7 @@
   <body>
     <?php
 $initial = $_GET["initial"];
-  echo "$initial";
+  echo $initial;
 ?>
   </body>
   </html>
