@@ -1,7 +1,4 @@
-<html>
-  <body>
-   
-    
-      
-  </body>
-  </html>
+
+$initial = <?php $_GET["initial"]>;
+  echo $initial;
+
