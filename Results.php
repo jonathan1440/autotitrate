@@ -11,7 +11,7 @@
     </p>
     <script language="php">
     $initial = $_GET["initial"];
-    echo $initial;
+    echo <p>$initial</p>;
     </script>
   </body>
   </html>
