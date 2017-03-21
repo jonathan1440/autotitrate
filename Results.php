@@ -10,7 +10,7 @@
       The results should be here
     </p>
     <script language="php">
-    $initial = $_GET["initial"];
+    $initial = $_POST["initial"];
     echo <p>$initial</p>;
     </script>
   </body>
