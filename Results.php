@@ -9,9 +9,9 @@
     <p>
       The results should be here
     </p>
-    <?php
+    <script language="php">
     $initial = $_GET["initial"];
     echo $initial;
-?>
+    </script>
   </body>
   </html>
