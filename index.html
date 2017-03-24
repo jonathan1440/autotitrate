@@ -16,6 +16,8 @@
 	<!-- This form should ask for 
 concentration inputs and specify if the initial and added substance is a base or acid -->
 	<div id="container">
+		
+		
 		<div id="main" role="main">
 			<form id="form" method=get>
   				Molar Concentration of Weak ___: <br />
@@ -46,13 +48,18 @@ function myFunction() {
    
 	initial = x.elements[1].value;
 	
-	echo <p>"inittype" + "inital"</p>;
+	document.getElementById("form").textcontent = "initial";
    
 	
 }
 				 
 			</script>
 		</div>				
+	
+	<div id="results">
+		
+		
+		</div>
 	</div>
 	
 </body>
