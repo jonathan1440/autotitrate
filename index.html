@@ -1,10 +1,7 @@
 <!DOCTYPE html>
 <html>
 <?xml version="1.0" encoding="UTF-8"?>
-<configuration>
-    <system.webServer>
-        <handlers accessPolicy="Read, Execute, Script">
-            <remove name="PHP55_via_FastCGI" />
+
 <head>
     <meta charset="utf-8" />
 	<title> Auto-Titrate </title>
@@ -32,17 +29,10 @@ concentration inputs and specify if the initial and added substance is a base or
 				Molarity: <input type="text" name="added"><br />
 				<input type="submit" name="submit" id="submit" class="button" value="Submit"/><br />
 			</form>
-			<p><a href=/Results.html>Click Here for Results<a></p>
+			
 			 <script type="text/javascript">
-				 function setCookie(name, value){
-					 document.cookie=name + "=" + escape(value) + "; path=/; expires=" + expiry.toGMTString();
-				 function storeValues(form){
-					 setCookie("inittype", form.inittype.value);
-					 setCookie("addtype", form.addtype.value);
-					 setCookie("initial", form.initial.value);
-					 setCookie("added", form.added.value);
-					 return true;
-				 }
+					 document.cookie= "initial" + "=" + document.form.initial + "; path=/; expires=" + expiry.toGMTString();
+				 
 			</script>
 		</div>				
 	</div>
