@@ -22,7 +22,7 @@ function myFunction() {
 	var added;
 	var inittype;
 	var addtype;
-	inittype = x.elements[name].value;
+	inittype = x.elements[].value;
 	initial = x.elements[initial].value;
 	document.getElementById("display").innerHTML = initial;
 }
@@ -33,7 +33,7 @@ function myFunction() {
 		<div id="main" role="main">
 			<form id="form" method=get>
   				Molar Concentration of Weak ___: <br />
-				<input type="radio" name="inittype" value="Base" checked> Base <br />
+				<input type="radio" name="inittype" value="Base" value="Acid" checked> Base <br />
 				<input type="radio" name="inittype" value="Acid"> Acid <br />
 				Molarity: <input type="text" name="initial"><br />
 				<br />
