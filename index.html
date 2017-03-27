@@ -15,8 +15,20 @@
 	<h3>Input Your Data</h3>
 	<!-- This form should ask for 
 concentration inputs and specify if the initial and added substance is a base or acid -->
+	 <script>
+function myFunction() {
+	var x = document.getElementById("form");
+	var initial;
+	var added;
+	var inittype;
+	var addtype;
+	inittype = x.elements[0].value;
+	initial = x.elements[1].value;
+	document.getElementById("display").innerHTML = initial;
+}
+				 
+			</script>
 	<div id="container">
-		
 		
 		<div id="main" role="main">
 			<form id="form" method=get>
@@ -32,34 +44,10 @@ concentration inputs and specify if the initial and added substance is a base or
 				
 			</form>
 			<button onclick="myFunction()"> Titrate! </button>
-			 <script>
-function myFunction() {
-	var x = document.getElementById("form");
-  
-	var initial;
-   
-	var added;
-   
-	var inittype;
-  
-	var addtype;
-  
-	inittype = x.elements[0].value;
-   
-	initial = x.elements[1].value;
-	
-	document.getElementById("form").textcontent = "initial";
-   
-	
-}
-				 
-			</script>
+			<p> <span id="display"> </span> </p>
 		</div>				
 	
-	<div id="results">
-		
-		
-		</div>
+	
 	</div>
 	
 </body>
