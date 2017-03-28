@@ -22,8 +22,12 @@ function myFunction() {
 	var added;
 	var inittype;
 	var addtype;
-	inittype = x.variables[inittype]
-	initial = x.variables[initial]
+	if x.elements[0].checked {
+		inittype = x.elements[0].value;
+	}
+	if x.elements[1].checked {
+		initial = x.elements[1].value;
+	}
 	document.getElementById("display").innerHTML = initial;
 }
 				 
@@ -32,15 +36,15 @@ function myFunction() {
 		
 		<div id="main" role="main">
 			<form id="form" method=get>
-  				Molar Concentration of Weak ___: <br />
-				<input type="radio" name="inittype" value="Base" value="Acid" checked> Base <br />
-				<input type="radio" name="inittype" value="Acid"> Acid <br />
-				Molarity: <input type="text" name="initial"><br />
+  				Molar Concentration of Weak ___: [Base/Acid] <br />
+				<input type="text" name="inittype" value="Base"> <br />
+				
+				Molarity: <input type="text" value="1.00" name="initial"><br />
 				<br />
 				Molar Concentration of Strong ____ added:<br />
-				<input type="radio" name="addtype" value="Base" checked> Base <br />
-				<input type="radio" name="addtype" value="Acid"> Acid <br />
-				Molarity: <input type="text" name="added"><br />
+				<input type="text" name="addtype" value="Base"><br />
+				
+				Molarity: <input type="text" value="1.00" name="added"><br />
 				
 			</form>
 			<button onclick="myFunction()"> Titrate! </button>
