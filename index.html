@@ -24,10 +24,23 @@ function titrate() {
 	var addtype;
 	inittype = x.elements[0].value;
 	initial = x.elements[1].value;
-	added = x.elements[3].value;
-	addtype = x.elements[2].value;
-	var molinit = 
-	if 
+	var initvol = x.elements[2].value;
+	addtype = x.elements[3].value;
+	added = x.elements[4].value;
+	var addvol = x.elements[5].value;
+	
+	
+	var molinit = Number(initvol) * Number(initial);
+	var moladd = Number(addvol) * Number(added);
+	if molinit < moladd {
+		moladd = moladd - molinit;
+		var newM = moladd / (addvol + initvol);
+		if addtype = "Base" { 
+		var pH = Math.log10(((10 ^ (-14)) / (newM))) * -1;
+		}
+			
+		document.getElementById("display").innerHTML = <p>"The concentration of" + addtype + "is" + newM + "." <br /> "The pH is" + pH </p> 
+		
 	
 }
 				 
