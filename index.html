@@ -16,7 +16,7 @@
 	<!-- This form should ask for 
 concentration inputs and specify if the initial and added substance is a base or acid -->
 	 <script>
-function titrate() {
+function titrate(){
 	var x = document.getElementById("form");
 	var initial;
 	var added;
@@ -35,8 +35,12 @@ function titrate() {
 	if molinit < moladd {
 		moladd = moladd - molinit;
 		var newM = moladd / (addvol + initvol);
+		var pH;
 		if addtype = "Base" { 
-		var pH = Math.log10(((10 ^ (-14)) / (newM))) * -1;
+		pH = Math.log10(((10 ^ (-14)) / (newM))) * -1;
+		}
+		else { 
+			pH = Math.log10(newM) * (-1);
 		}
 			
 		document.getElementById("display").innerHTML = <p>"The concentration of" + addtype + "is" + newM + "." <br /> "The pH is" + pH </p> 
