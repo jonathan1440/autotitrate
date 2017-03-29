@@ -1,1 +1,58 @@
+<!DOCTYPE html>
+<html>
+<?xml version="1.0" encoding="UTF-8"?>
 
+<head>
+    <meta charset="utf-8" />
+	<title> Auto-Titrate </title>
+ 
+</head>
+    
+<body>
+	<h1>Auto-Titrate</h1>
+	<h2>WIP</h2>
+	
+	<h3>Input Your Data</h3>
+	<!-- This form should ask for 
+concentration inputs and specify if the initial and added substance is a base or acid -->
+	 <script>
+function myFunction() {
+	var x = document.getElementById("form");
+	var initial;
+	var added;
+	var inittype;
+	var addtype;
+	inittype = x.elements[0].value;
+	initial = x.elements[1].value;
+	added = x.elements[3].value;
+	addtype = x.elements[2].value;
+	var z = Number(initial) + Number(added);
+	document.getElementById("display").innerHTML = z;
+}
+				 
+			</script>
+	<div id="container">
+		
+		<div id="main" role="main">
+			<form id="form" method=get>
+  				Molar Concentration of Weak ___: [Base/Acid] <br />
+				<input type="text" name="inittype" value="Base"> <br />
+				
+				Molarity: <input type="text" value="1.00" name="initial"><br />
+				<br />
+				Molar Concentration of Strong ____ added:<br />
+				<input type="text" name="addtype" value="Base"><br />
+				
+				Molarity: <input type="text" value="1.00" name="added"><br />
+				
+			</form>
+			<button onclick="myFunction()"> Titrate! </button>
+			<p> <span id="display"> </span> </p>
+		</div>				
+	
+	
+	</div>
+	
+</body>
+		
+</html>
