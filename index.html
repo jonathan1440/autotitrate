@@ -34,7 +34,7 @@ function titrate(){
 	var moladd = Number(addvol) * Number(added);
 	if (molinit < moladd){
 		moladd = moladd - molinit;
-		var newM = moladd / (addvol + initvol);
+		var newM = moladd / (Number(addvol) + Number(initvol));
 		var pH;
 		if (addtype = "Base"){ 
 		pH = Math.log10(((10 ^ (-14)) / (newM))) * -1;
