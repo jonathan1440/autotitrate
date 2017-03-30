@@ -42,8 +42,11 @@ function titrate(){
 		else { 
 			pH = Math.log10(newM) * (-1);
 		};
-			
-		document.getElementById("display").innerHTML = "The concentration of " + addtype + " is" + newM + ".  The pH is " + pH; 
+		
+		
+		pH = String(pH);
+		newM = String(pH);
+		document.getElementById("display").innerHTML = "The concentration of " + addtype + " is " + newM + ".  The pH is " + pH; 
 	};
 	
 };
