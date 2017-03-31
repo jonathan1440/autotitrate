@@ -19,6 +19,7 @@ concentration inputs and specify if the initial and added substance is a base or
 		 function log10(x){
 		return (Math.log(x) / Math.log(10));	 
 		 }
+	
 function titrate(){
 	var x = document.getElementById("form");
 	var inittype = x.elements[0].value;
@@ -34,19 +35,22 @@ function titrate(){
 	var moladd = Number(addvol) * Number(added);
 	var pH;
 	if (molinit < moladd){
-		moladd = moladd - molinit;
-		var newM = moladd / (addvol + initvol);
+		var newMol = moladd - molinit;
+		var newM = NewMol / (addvol + initvol);
 		
 		if (inittype = "Acid"){ 
-		pH = (Math.log(Math.pow(10,-14) / (newM)) / (Math.log(10))) * (-1);
+		pH = log10((Math.pow(10,-14) / (newM)));
+			document.getElementById("display").innerHTML = "The concentration of " + "Acid" + " is " + newM + "M.  The pH is " + pH; 
+		return;
 		}
 		else { 
 			pH = Math.log(newM) * (-1);
+			document.getElementById("display").innerHTML = "The concentration of " + "Base" + " is " + newM + "M.  The pH is " + pH; 
+		return;
 		}
 		
 		
-		document.getElementById("display").innerHTML = "The concentration of " + addtype + " is " + newM + "M.  The pH is " + pH; 
-		return;
+		
 	}
 	if (molinit = moladd){
 		var newconst = (Math.pow(10,-14) / (constant));
