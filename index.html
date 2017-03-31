@@ -36,7 +36,7 @@ function titrate(){
 	var pH;
 	if (molinit < moladd){
 		var newMol = moladd - molinit;
-		var newM = NewMol / (addvol + initvol);
+		var newM = newMol / (addvol + initvol);
 		
 		if (inittype = "Acid"){ 
 		pH = log10((Math.pow(10,-14) / (newM)));
@@ -54,9 +54,9 @@ function titrate(){
 	}
 	if (molinit = moladd){
 		var newconst = (Math.pow(10,-14) / (constant));
-		molinit = moladd / (initvol + addvol);
+		var newMolinit = moladd / (initvol + addvol);
 		if (inittype = "Acid"){
-		pH = log10((Math.sqrt(molinit * newconst)))	
+		pH = log10((Math.sqrt(newMolinit * newconst)))	
 		}
 	 
 		
