@@ -57,12 +57,14 @@ function titrate(){
 		var newMolinit = moladd / (initvol + addvol);
 		if (inittype = "Acid"){
 		pH = 14 - log10((Math.sqrt(newMolinit * newconst)))	
+			document.getElementById("display").innerHTML = "The concentration of " + "Weak Acid" + " is " + newM + "M.  The pH is " + pH; 
 		}
 	 	else {
 			pH = log10((Math.sqrt(newMolinit * newconst)))
+			document.getElementById("display").innerHTML = "The concentration of " + "Weak Base" + " is " + newM + "M.  The pH is " + pH; 
 		}
 		
-		document.getElementById("display").innerHTML = "The concentration of " + addtype + " is " + newM + "M.  The pH is " + pH; 
+		
 	}
 	
 }
