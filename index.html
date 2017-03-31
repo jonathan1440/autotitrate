@@ -39,7 +39,7 @@ function titrate(){
 		var newM = newMol / (addvol + initvol);
 		
 		if (inittype = "Acid"){ 
-		pH = log10((Math.pow(10,-14) / (newM)));
+		pH = log10((Math.pow(10,-14) / (newM))) * (-1);
 			document.getElementById("display").innerHTML = "The concentration of " + "Acid" + " is " + newM + "M.  The pH is " + pH; 
 		return;
 		}
@@ -56,9 +56,11 @@ function titrate(){
 		var newconst = (Math.pow(10,-14) / (constant));
 		var newMolinit = moladd / (initvol + addvol);
 		if (inittype = "Acid"){
-		pH = log10((Math.sqrt(newMolinit * newconst)))	
+		pH = 14 - log10((Math.sqrt(newMolinit * newconst)))	
 		}
-	 
+	 	else {
+			pH = log10((Math.sqrt(newMolinit * newconst)))
+		}
 		
 		document.getElementById("display").innerHTML = "The concentration of " + addtype + " is " + newM + "M.  The pH is " + pH; 
 	}
