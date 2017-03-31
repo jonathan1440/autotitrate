@@ -28,7 +28,7 @@ function titrate(){
 	
 	var added = Number(x.elements[3].value);
 	var addvol = Number(x.elements[4].value);
-	var constant = Number(x.elements[5].value);
+	var constant = Number(x.elements[5].value) * Math.pow(10,Number(x.elements[6].value));
 	
 	
 	var molinit = Number(initvol) * Number(initial);
@@ -85,7 +85,7 @@ function titrate(){
 				
 				Molarity: <input type="text" value="1.00" name="added"><br />
 				Volume: <input type="text" value=".15" name="addvol"> (In liters)<br />
-			      [Ka/Kb]: <input type="text" value="0.001" name="constant"> (Don't use scientific notation)
+			      [Ka/Kb]: <input type="text" value="6.32" name="sigConstant"> * 10 ^ <input type="text" value="-3" name="power">
 				
 			</form>
 			<button onclick=titrate()> Titrate! </button>
