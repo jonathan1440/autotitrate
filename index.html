@@ -32,8 +32,8 @@ function titrate(){
 		moladd = moladd - molinit;
 		var newM = moladd / (addvol + initvol);
 		var pH;
-		if (addtype = "Base"){ 
-		pH = Math.log(Math.pow(10,-14) / (newM)) / (Math.log(10));
+		if (inittype = "Acid"){ 
+		pH = (Math.log(Math.pow(10,-14) / (newM)) / (Math.log(10))) * (-1);
 		}
 		else { 
 			pH = Math.log(newM) * (-1);
@@ -42,7 +42,7 @@ function titrate(){
 		
 		
 		
-		document.getElementById("display").innerHTML = "The concentration of " + addtype + " is " + newM + ".  The pH is " + pH; 
+		document.getElementById("display").innerHTML = "The concentration of " + addtype + " is " + newM + "M.  The pH is " + pH; 
 	}
 	
 	
@@ -60,7 +60,7 @@ function titrate(){
 				<br />
 				Volume: <input type="text" value=".15" name="initvol"> (In liters)<br />
 				Molar Concentration of Strong ____ added: [Base/Acid]<br />
-				<input type="text" name="addtype" value="Base"><br />
+				<input type="text" name="addtype" value="This will depend on initial"><br />
 				
 				Molarity: <input type="text" value="1.00" name="added"><br />
 				Volume: <input type="text" value=".15" name="addvol"> (In liters)<br />
