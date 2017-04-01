@@ -68,10 +68,13 @@ function titrate(){
 		
 		
 	}
+	
+	
 	if (molinit > moladd){
 		var newMol = molinit - moladd;
 		var newM = newMol / (addvol + initvol);
 		var saltM = moladd / (addvol + initvol);
+		
 		if (inittype == "Acid"){ 
 		pH = -log10(constant) + log10(saltM/newM);
 			saltM = saltM + (constant / saltM) * newM;
@@ -79,6 +82,8 @@ function titrate(){
 			document.getElementById("display").innerHTML = "The concentration of " + "Weak Acid" + " is " + newM + "M and the concentration of its conjugate base is " + saltM + "M." + "The pH is " + pH; 
 		return;
 		}
+		
+		
 		else { 
 			pH = 14 + log10(constant) + log10(saltM/newM);
 			saltM = saltM + (constant / saltM) * newM;
@@ -86,7 +91,7 @@ function titrate(){
 			document.getElementById("display").innerHTML = "The concentration of Weak Base is " + newM + "M and the concentration of the conjugate base is " + saltM + "M. The pH is " + pH; 
 		return;
 		}
-	
+	}
 }
 				 
 			</script>
