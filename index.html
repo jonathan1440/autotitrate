@@ -61,7 +61,7 @@ function titrate(){
 			document.getElementById("display").innerHTML = "The concentration of " + "Weak Acid" + " is " + newMinit + "M.  The pH is " + pH; 
 		}
 	 	else {
-			pH = log10(Math.sqrt(newConst*newMinit));
+			pH = -log10((-newConst+Math.sqrt(  Math.pow(newConst,2) + 4 * newConst * newMinit  ) / 2 ));
 			document.getElementById("display").innerHTML = "The concentration of " + "Weak Base" + " is " + newMinit + "M.  The pH is " + pH; 
 		}
 		
