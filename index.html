@@ -37,7 +37,7 @@ function titrate(){
 	if (molinit < moladd){
 		var newMol = moladd - molinit;
 		var newM = newMol / (addvol + initvol);
-		phase = "4";
+		phase = "Phase 4. ";
 		if (inittype == "Acid"){ 
 		pH = log10((Math.pow(10,-14) / (newM))) * (-1);
 			document.getElementById("display").innerHTML = phase + "The concentration of " + "Acid" + " is " + newM + "M.  The pH is " + pH; 
@@ -60,7 +60,7 @@ function titrate(){
 	if (molinit == moladd){
 		var newConst = (Math.pow(10,-14) / (constant));
 		var newMinit = molinit / (initvol + addvol);
-		phase = "3"
+		phase = "Phase 3. "
 
 		if (inittype == "Acid"){
 		pH = 14 + log10(   (-newConst+Math.sqrt(  Math.pow(newConst,2) + 4 * newConst * newMinit  ) / 2 )   );
@@ -78,7 +78,7 @@ function titrate(){
 	}
 	
 	if (moladd == 0){
-		phase = "1";
+		phase = "Phase 1. ";
 		var saltM;
 		
 		if (inittype == "Acid"){ 
@@ -94,7 +94,7 @@ function titrate(){
 			pH = 14 + log10(Math.sqrt(initial * constant));
 			saltM = Math.sqrt(initial * constant);
 			initial = initial - Math.sqrt(initial * constant);
-			document.getElementById("display").innerHTML = "Phase " + phase + ". The concentration of Weak Base is " + initial + "M and the concentration of the conjugate acid is " + saltM + "M. The pH is " + pH; 
+			document.getElementById("display").innerHTML = phase +  "The concentration of Weak Base is " + initial + "M and the concentration of the conjugate acid is " + saltM + "M. The pH is " + pH; 
 		return;
 		}
 		
@@ -103,7 +103,7 @@ function titrate(){
 		var newMol = molinit - moladd;
 		var newM = newMol / (addvol + initvol);
 		var saltM = moladd / (addvol + initvol);
-		phase = "2";
+		phase = "Phase 2. ";
 		if (inittype == "Acid"){ 
 		pH = -log10(constant) + log10(saltM/newM);
 			saltM = saltM + (constant / saltM) * newM;
