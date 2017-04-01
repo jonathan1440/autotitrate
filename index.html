@@ -83,8 +83,8 @@ function titrate(){
 		
 		if (inittype == "Acid"){ 
 		pH = -log10(Math.sqrt(initial * constant));
-			saltM = (Math.sqrt(initial * constant);
-			initial = initial + (Math.sqrt(initial * constant);
+			saltM = Math.sqrt(initial * constant);
+			initial = initial + Math.sqrt(initial * constant);
 			document.getElementById("display").innerHTML = phase + "The concentration of " + "Weak Acid" + " is " + initial + "M and the concentration of its conjugate base is " + saltM + "M." + "The pH is " + pH; 
 		return;
 		}
@@ -92,8 +92,8 @@ function titrate(){
 		
 		else { 
 			pH = 14 + log10(Math.sqrt(initial * constant));
-			saltM = (Math.sqrt(initial * constant);
-			initial = initial + (Math.sqrt(initial * constant);
+			saltM = Math.sqrt(initial * constant);
+			initial = initial + Math.sqrt(initial * constant);
 			document.getElementById("display").innerHTML = "Phase " + phase + ". The concentration of Weak Base is " + initial + "M and the concentration of the conjugate acid is " + saltM + "M. The pH is " + pH; 
 		return;
 		}
